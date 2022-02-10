@@ -1,20 +1,19 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Navbar from './components/Navbar.vue'
+// import Employees from './components/Employees.vue';
+import Loop from './components/Loop.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <!-- <header class="wrapper">
+        <Navbar />
+    </header> -->
+    <body>
+      <!-- <Employees /> -->
+      <Loop />
+    </body>
+  </div>
 </template>
 
 <style>
@@ -23,14 +22,14 @@ import TheWelcome from './components/TheWelcome.vue'
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+ padding: 2rem;
 
   font-weight: normal;
 }
 
 header {
   line-height: 1.5;
-}
+} 
 
 .logo {
   display: block;
@@ -66,12 +65,14 @@ a,
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
+    padding: 0rem;
   }
 
   header .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    padding: 0rem;
   }
 
   .logo {
