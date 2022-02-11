@@ -1,6 +1,5 @@
-<div v-if="!EmployeeData"></div>
-<template  v-else>
-    <div>
+<template>
+    <div v-if="EmployeeData.length">
         <div v-for="Employee in EmployeeData" v-bind:key="Employee.id">
             <div class="card" style="width: 15rem;">
                 <!-- As no images are in the file, this isn't strictly necessary but it's nice to have -->
@@ -13,6 +12,7 @@
             </div>
         </div>
     </div>
+    <div v-else>Loading...</div>
 </template>
 
 <script>
@@ -21,14 +21,13 @@ import axios from 'axios'
 export default {
     data () {
     return {
-      EmployeeData: null
+      EmployeeData: []
     }
   },
   mounted () {
     axios
-      .get('http://dummy.restapiexample.com/api/v1/employees')
-      .then(response => (this.EmployeeData = response.data))
-
+        .get('http://dummy.restapiexample.com/api/v1/employees')
+        .then(response => (this.EmployeeData = response.data))
   }
 }
 </script>
