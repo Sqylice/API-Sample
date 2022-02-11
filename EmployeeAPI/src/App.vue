@@ -14,5 +14,4 @@ import Loop from './components/Loop.vue';
 
 <style>
 @import './assets/base.css';
-
 </style>

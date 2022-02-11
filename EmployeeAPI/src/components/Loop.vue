@@ -7,13 +7,15 @@
 
         <!-- for-loop to go through the whole length of the json -->
         <div v-for="Employee in EmployeeData" v-bind:key="Employee.id">
-            <div class="card" style="width: 15rem;">
+            <!-- Empty h4 tag here is only acting as a smaller linebreak -->
+            <h4></h4>
+            <div class="card" style="width: 16rem;">
                 <!-- As no images are in the file, this isn't strictly necessary but I am keeping it here in case pictures were to be added -->
                 <!-- <img class="card-img-top" src="{{ Employee.profile_image }}" alt="A profile picture of the employee"> -->
                 <div class="card-body bg-dark">
                     <h5 class="card-title">{{ Employee.employee_name }}</h5>
-                    <p class="card-text">Salary: {{ Employee.employee_salary }}</p>
-                    <p class="card-text">Age: {{ Employee.employee_age }}</p>
+                    <p class="card-text font-weight-bold">Salary: {{ Employee.employee_salary }}</p>
+                    <p class="card-text font-weight-bold">Age: {{ Employee.employee_age }}</p>
                 </div>
             </div>
         </div>

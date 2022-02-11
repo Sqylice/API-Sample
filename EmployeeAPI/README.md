@@ -27,6 +27,8 @@ npm run dev
 
 ### Compile and Minify for Production
 
+IMPORTANT! I chose to make this for the latest version of Vue 3. This has worked well overall but a known issue is that you will need to use specifically this command in order to make it work on all browsers.
+
 ```sh
 npm run build
 ```
