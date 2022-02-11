@@ -1,14 +1,12 @@
 <script setup>
-// import Employees from './components/Employees.vue';
+//The only component that we are really working with is the basic loop
 import Loop from './components/Loop.vue';
 </script>
 
 <template>
   <div>
-    <header class="wrapper">
-    </header>
     <body>
-      <!-- <Employees /> -->
+      <!-- Dropping the loop into place in the html -->
       <Loop />
     </body>
   </div>
