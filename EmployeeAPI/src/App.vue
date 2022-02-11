@@ -1,5 +1,5 @@
 <script setup>
-import Navbar from './components/Navbar.vue'
+// import Navbar from './components/Navbar.vue'
 // import Employees from './components/Employees.vue';
 import Employees_local from './components/Employees_local.vue';
 import Loop from './components/Loop.vue';
@@ -12,7 +12,7 @@ import Loop from './components/Loop.vue';
     </header>
     <body>
       <!-- <Employees /> -->
-      <Employees_local />
+      <!-- <Employees_local /> -->
       <Loop />
     </body>
   </div>

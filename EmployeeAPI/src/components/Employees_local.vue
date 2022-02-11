@@ -4,7 +4,7 @@
 
 <script>
 // Importing array from local JSON file for testing
-import json from "C:/Code/Mina-Egna-Grejs/Employee-API/EmployeeAPI/API-Sample/EmployeeAPI/data/employees.json"
+import json from "@/data/employees.json"
 console.log(json.status)
 export default {
     name: 'EmployeeData',
