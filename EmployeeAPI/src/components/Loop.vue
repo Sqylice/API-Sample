@@ -1,18 +1,19 @@
 <template>
-  <div>
-      <!-- <p> {{EmployeeData}} </p> -->
-      <div v-for="Employee in EmployeeData" v-bind:key="Employee.id">
-          <h3>{{ Employee.employee_name }}</h3>
-          <p>{{ Employee.employee_salary }}</p>
-          <p>{{ Employee.employee_age }}</p>
-          <!-- <img src="{{ EmployeeData.employee_img }}" alt=""> -->
-      </div>
-  </div>
+    <div class="row">
+        <div v-for="Employee in EmployeeData" v-bind:key="Employee.id">
+            <div class="card bg-dark col-sm-3">
+                <div class="card-body bg-dark">
+                    <h5 class="card-title">{{ Employee.employee_name }}</h5>
+                    <p class="card-text">Salary: {{ Employee.employee_salary }}</p>
+                    <p class="card-text">Age: {{ Employee.employee_age }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
     import json from "@/data/employees.json"
-    // import Employees from './Employees_local.vue'
     console.log(json);
 
 export default {

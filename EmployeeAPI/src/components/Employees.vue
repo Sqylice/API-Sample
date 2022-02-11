@@ -4,7 +4,6 @@
 
 <script>
 import axios from 'axios'
-// import json from "http://dummy.restapiexample.com/api/v1/employees"
 
 export default {
     name: 'EmployeeData',
