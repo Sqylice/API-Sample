@@ -8,7 +8,7 @@
                     <p class="card-text">Age: {{ Employee.employee_age }}</p>
                 </div>
             </div>
-        </div>
+      </div>
     </div>
 </template>
 
