@@ -1,8 +1,10 @@
 <template>
     <!-- Checking for an empty array -->
     <div v-if="EmployeeData.length">
+
         <!-- Nice presentation text to contextualise the data -->
         <h2>{{EmployeeData.length}} Employees:</h2>
+
         <!-- for-loop to go through the whole length of the json -->
         <div v-for="Employee in EmployeeData" v-bind:key="Employee.id">
             <div class="card" style="width: 15rem;">
@@ -16,15 +18,17 @@
             </div>
         </div>
     </div>
+
     <!-- If no data has been found then we tell the user that the data is being loaded -->
     <div v-else>
-        <h2>Loading...</h2>
+        <h4>Loading...</h4>
     </div>
 </template>
 
 <script>
-//Pull out axios to use "get"
+//Import axios from files to use the axios functions
 import axios from 'axios'
+
 //Pull the local .json file for a cached redundant data copy
 import json from "@/data/employees.json"
 
@@ -34,16 +38,18 @@ export default {
         //Default empty array to be overwritten, if this is empty we will have a "loading" text
         EmployeeData: [],
     }
-  },
-  mounted () {
+},
+mounted () {
     axios
-    // get the url in question
-        .get('http://dummy.restapiexample.com/api/v1/employees')
+        // get the url in question
+        .get('http://dummy.restapiexample.com/api/v1/employees', {timeout:4000})
+
         // separate the data array that we are interested in
         .then(response => (this.EmployeeData = response.data.data))
+
         // if we get an error (like 429) then we pull out our redundant cached copy
-        // to do: overwrite the local copy whenever we have a successful get
+        // TODO: overwrite the local copy whenever we have a successful get
         .catch(error => (this.EmployeeData = json.data))
-  }
+    }
 }
 </script>
