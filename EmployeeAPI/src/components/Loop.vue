@@ -2,7 +2,7 @@
 <template  v-else>
     <div>
         <div v-for="Employee in EmployeeData" v-bind:key="Employee.id">
-            <div class="card col-sm-4">
+            <div class="card" style="width: 15rem;">
                 <div class="card-body bg-dark">
                     <h5 class="card-title">{{ Employee.employee_name }}</h5>
                     <p class="card-text">Salary: {{ Employee.employee_salary }}</p>
